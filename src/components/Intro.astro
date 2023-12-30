@@ -1,0 +1,71 @@
+---
+import Card from './Card.astro'
+
+const Information = {
+    cards: [
+        {
+            title: "San Silvestre Trail",
+            description: "Barx celebra su propia San Silvestre el último día del año. Una ocasión perfecta para practicar deporte de la forma más divertida, ¡con un disfraz!",
+            image: "https://multimedia.comunitatvalenciana.com/BCB4227951EE49E691FCF2A08881CC50/img/4303B9C070934D178BB3F58664123C33/deportivos.jpg?responsive"
+        },
+        {
+            title: "San Silvestre Trail",
+            description: "Barx celebra su propia San Silvestre el último día del año. Una ocasión perfecta para practicar deporte de la forma más divertida, ¡con un disfraz!",
+            image: "https://multimedia.comunitatvalenciana.com/BCB4227951EE49E691FCF2A08881CC50/img/4303B9C070934D178BB3F58664123C33/deportivos.jpg?responsive"
+        },
+        {
+            title: "San Silvestre Trail",
+            description: "Barx celebra su propia San Silvestre el último día del año. Una ocasión perfecta para practicar deporte de la forma más divertida, ¡con un disfraz!",
+            image: "https://multimedia.comunitatvalenciana.com/BCB4227951EE49E691FCF2A08881CC50/img/4303B9C070934D178BB3F58664123C33/deportivos.jpg?responsive"
+        },
+        {
+            title: "San Silvestre Trail",
+            description: "Barx celebra su propia San Silvestre el último día del año. Una ocasión perfecta para practicar deporte de la forma más divertida, ¡con un disfraz!",
+            image: "https://multimedia.comunitatvalenciana.com/BCB4227951EE49E691FCF2A08881CC50/img/4303B9C070934D178BB3F58664123C33/deportivos.jpg?responsive"
+        },
+    ]
+    
+}
+
+---
+<style>
+    .swiper {
+      width: 130%;
+      height: 100%;
+      text-align: center;
+      margin-left: -10%;
+        margin-right: auto;
+    }
+  </style>
+<section>
+    
+    
+    <h1 class="text-5xl font-semibold text-center text-wrap mx-auto mb-10 tracking-wide">Proximos Eventos</h1>
+
+  
+    <div class="swiper ">
+        <div class="swiper-wrapper">
+            {Information['cards'].map(function(card) {
+                return <div class="swiper-slide ">
+                <Card Title={card?.title} Description={card?.description} Image={card?.image}/>
+                </div>
+            })}
+        
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+  
+
+</section>
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+<script is:inline src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+<script is:inline>new Swiper('.swiper', {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+ })</script>
