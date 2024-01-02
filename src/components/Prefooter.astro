@@ -1,0 +1,73 @@
+---
+import Card from './CardReview.astro'
+
+const Information = {
+    cards: [
+        {
+            title: "Albufera, El Palmar y paseo en barca",
+            description: "Disfruta de un paseo por la albufera recoriendo los lugares que se esconden dentro",
+            image: "https://www.experienciascv.es/img-experiencias/1200/16780_FOTO1.jpg",
+            place: "Valencia"
+        },
+        {
+            title: "Ruta castillos y biar con bodega",
+            description: "Vive una experiencia inolvidable visitando los castillos mas emblemáticos y lo que esconden dentro de estos",
+            image: "https://www.experienciascv.es/img-experiencias/1200/10980_FOTO1.JPG",
+            place: "Villena, Biar"
+        },
+        {
+            title: "Calas y cuevas paradisíacas en kayak y snorkel",
+            description: "Visitas las maravillosas calas en kayak y bucea entre ellas para vivir una auntentica experiencia",
+            image: "https://www.experienciascv.es/img-experiencias/1200/2911_FOTO1.jpg",
+            place: "Benissa"
+        },
+        {
+            title: "Ascenso en Vertical",
+            description: "Atrevete a ascender por un sendero vertical ",
+            image: "https://www.experienciascv.es/img-experiencias/1200/9417_FOTO1.jpg",
+            place: "Villena"
+        },
+    ]
+    
+}
+
+---
+<style>
+    .swiper {
+      width: 130%;
+      height: 100%;
+      text-align: center;
+      margin-left: -10%;
+        margin-right: auto;
+    }
+  </style>
+<section>
+    
+    
+    <h1 class="text-5xl font-semibold text-center text-black text-wrap mx-auto mb-10 tracking-wide">Experiencias Inolvidables</h1>
+
+  
+    <div class="swiper ">
+        <div class="swiper-wrapper">
+            {Information['cards'].map(function(card) {
+                return <div class="swiper-slide ">
+                <Card Title={card?.title} Description={card?.description} Image={card?.image} Place={card?.place}/>
+                </div>
+            })}
+        
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+  
+
+</section>
+
+<script is:inline>new Swiper('.swiper', {
+    slidesPerView: 3,
+    spaceBetween: 30,
+   
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+ })</script>

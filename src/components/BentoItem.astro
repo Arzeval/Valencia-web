@@ -1,6 +1,6 @@
 ---
 
-const {title, subtitle } = Astro.props
+const {title, subtitle, content } = Astro.props
 ---
 <article
   class={`
@@ -36,6 +36,6 @@ const {title, subtitle } = Astro.props
       )
     }
 
-    <slot name="content" />
+<slot name="content" />
   </div>
 </article>
