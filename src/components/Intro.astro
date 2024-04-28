@@ -7,23 +7,27 @@ const Information = {
             title: "Talleres Navideños",
             description: "Esta Navidad, los niños y niñas de Ayódar y alrededores podrán disfrutar de los Talleres Navideños. ¡Regálales una jornada de diversión!",
             image: "https://multimedia.comunitatvalenciana.com/30210C7141654F8C8E6B6AA0A3AB5C02/img/2893ECF13BD44904B4895817D7E57613/CV-Talleres_Navidenos-1920x1080.jpg?responsive",
-            hastags: ['navidad','Talleres','winter']
+            hastags: ['navidad','Talleres','winter'],
+            AltImage: "Taller Navideños"
         },
         {
             title: "Feria de Navidad Vila-real",
             description: "Desde el 22 de diciembre hasta el 3 de enero tendrá lugar la conocida Feria de Navidad. Podrás disfrutar de múltiples actividades tales como espectáculos de magia, payasos, música, teatro, talleres de manualidades o cuentacuentos, entre otras.",
             image: "https://multimedia.comunitatvalenciana.com/C1142374567646B1881DC51F3EFF79ED/img/BEAE61BFF3124F09A3839B38716DB905/1703072965606portada7793250393708980754.jpg?responsive",
-            hastags: ['navidad','Talleres','winter']
+            hastags: ['navidad','Talleres','winter'],
+            AltImage: "Feria de Navidad"
         },
         {
             title: "Expojove",
             description: "¡Vuelve ExpoJove 2023 - 2024 a Valencia! Celebra las fiestas entre actividades y mucha diversión.",
-            image: "https://multimedia.comunitatvalenciana.com/1246A7837092441CB8CFD70A58D70E1D/img/7690AB454F704433967CE42D0CD2CBC6/1.jpg?responsive"
+            image: "https://multimedia.comunitatvalenciana.com/1246A7837092441CB8CFD70A58D70E1D/img/7690AB454F704433967CE42D0CD2CBC6/1.jpg?responsive",
+            AltImage: "Feria de ExpoJove"
         },
         {
             title: "San Silvestre Trail",
             description: "Barx celebra su propia San Silvestre el último día del año. Una ocasión perfecta para practicar deporte de la forma más divertida, ¡con un disfraz!",
-            image: "https://multimedia.comunitatvalenciana.com/BCB4227951EE49E691FCF2A08881CC50/img/4303B9C070934D178BB3F58664123C33/deportivos.jpg?responsive"
+            image: "https://multimedia.comunitatvalenciana.com/BCB4227951EE49E691FCF2A08881CC50/img/4303B9C070934D178BB3F58664123C33/deportivos.jpg?responsive",
+            AltImage: "Celebracion de final de Año divertida"
         },
     ]
     
@@ -49,7 +53,7 @@ const Information = {
         <div class="swiper-wrapper">
             {Information['cards'].map(function(card) {
                 return <div class="swiper-slide ">
-                <Card Title={card?.title} Description={card?.description} Image={card?.image} Hastags={card?.hastags}/>
+                <Card Title={card?.title} Description={card?.description} Image={card?.image} Hastags={card?.hastags} AltImage={card?.AltImage}/>
                 </div>
             })}
         

@@ -55,7 +55,7 @@ const Information = {
         <div class="swiper-wrapper">
             {Information['cards'].map(function(card) {
                 return <div class="swiper-slide ">
-                <Card Title={card?.title} Description={card?.description} Image={card?.image} Place={card?.place}/>
+                <Card Title={card?.title} Description={card?.description} Image={card?.image} Place={card?.place} AltImage={card?.AltImage}/>
                 </div>
             })}
         
