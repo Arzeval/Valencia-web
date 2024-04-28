@@ -1,5 +1,14 @@
-# Pagina Web de la Comunitat Valenciana reimaginada
+# Reimagined dashboard of the Comunidad Valenciana website
 
-Creada con fines de aprendizaje
+Created for didactic and educational purposes.
 
-**Esta Pagina Web NO ES LA OFICIAL**
+Made with Astro, Tailwind CSS and Swiper
+
+### TO DO
+
+- [ ] Optimized photos
+- [ ] Make Responsive
+- [ ] Refactor sliders 
+      
+> [!NOTE]  
+> The official page is: https://www.comunitatvalenciana.com/es/inicio
